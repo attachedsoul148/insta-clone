@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .navBtn {
+        @apply h-6 w-6 hover:scale-125 transition-all duration-100 ease-out cursor-pointer
+    }
+
+    body {
+        @apply scrollbar-hide
+    }
+}

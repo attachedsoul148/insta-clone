@@ -73,7 +73,7 @@ const Header = () => {
               <Bars3Icon className="navBtn inline md:hidden" />
               <HeartIcon className="navBtn" />
               <img
-                onClick={() => signOut()}
+                onClick={() => router.push("/profile")}
                 src={session?.user?.image!}
                 alt="profile-pic"
                 className="rounded-full h-10 w-10 cursor-pointer"

@@ -58,7 +58,7 @@ const Post: React.FC<Props> = ({
       })
     }
 
-    setValue('')
+    setValue("")
   }
 
   const likePost = async () => {
@@ -162,13 +162,16 @@ const Post: React.FC<Props> = ({
        overflow-y-scroll scrollbar-thin scrollbar-thumb-gray-200"
         >
           {comments?.map((comment) => (
-            <div className="flex justify-between items-center space-x-2 ">
+            <div
+              className="flex justify-between items-center space-x-2"
+              key={comment.id}
+            >
               <p className="text-sm px-1 truncate">
                 <span className="font-medium">{comment.name}</span>{" "}
                 {comment.text}
               </p>
 
-              <Moment fromNow className="text-xs pr-3">
+              <Moment fromNow className="text-xs pr-3 truncate">
                 {comment.timestamp.toDate()}
               </Moment>
             </div>

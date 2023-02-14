@@ -35,7 +35,7 @@ const Modal = () => {
   }
 
   const addPost = async () => {
-    if (value) {
+    if (value && photoToUpload) {
       setLoading(true)
       const docRef = await addDoc(collection(db, "posts"), {
         name: session?.user.name,
